@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8" />
+      <title>Unicode Code Displayer</title>
+      <script>
+         function display()
+         {
+            var character = document.getElementById("character").value;
+            document.getElementById("code").innerHTML = character.charCodeAt(0)
+         }
+      </script>
+   </head>
+   <body>
+      <input id="character" maxlength="1" size="1"/>
+      <button onclick="display()">Display</button>
+      <span>Code: </span><span id="code"></span>
+   </body>
+</html>

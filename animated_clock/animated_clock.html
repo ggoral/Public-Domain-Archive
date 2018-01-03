@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8" />
+      <title>Animated Clock</title>
+   </head>
+   <body onload="clock()">
+      <div id="clock" style="position:absolute;background-color:gray;"></div>
+      <script>
+         function clock()
+         {
+            var date_time = new Date();
+            var hour = date_time.getHours();
+            var minute = date_time.getMinutes();
+            var second = date_time.getSeconds();
+
+            second = zero(second);
+            minute = zero(minute);
+
+            document.getElementById("clock").innerHTML = hour + ":" + minute + ":" + second;
+            document.getElementById("clock").style.left = second + "%";
+            document.getElementById("clock").style.top = minute + "%";
+            document.getElementById("clock").style.fontSize = (hour * 2 + 12) + "pt"
+         }
+
+         function zero(x)
+         {
+            if(x < 10)
+            {
+               x = "0" + x;
+               return x
+            }
+            else
+            {
+               return x
+            }
+         }
+
+         setInterval(function() { clock() }, 1000);
+      </script>
+   </body>
+</html>

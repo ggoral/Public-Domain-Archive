@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8" />
+      <title>Counter</title>
+      <script>
+         function count()
+         {
+            var value = document.getElementById('value').value;
+
+            if(isNaN(value) || value < 1)
+            {
+               alert('Value should be a number and value should greater than zero.')
+            }
+            else
+            {
+               for(i = 1; i <= value; i++)
+               {
+                  document.write(i + '<br />')
+               }
+            }
+         }
+      </script>
+   </head>
+   <body>
+      <input type="number" id="value" min="1" max="Number.MAX_VALUE" step="1" value="1"/>
+      <button onclick="count()">Count</button>
+   </body>
+</html>
