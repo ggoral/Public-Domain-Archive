@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8" />
+      <title>Color Displayer</title>
+   </head>
+   <body>
+      <input id="r" type="number" min="0" max="255" value="0" />
+      <input id="g" type="number" min="0" max="255" value="0" />
+      <input id="b" type="number" min="0" max="255" value="0" />
+
+      <button onclick="color()">Mix</button>
+
+      <div id="color" style="position:absolute; top:100px; left:10px; width:200px; height:200px"></div>
+
+      <script>
+         function color()
+         {
+            document.getElementById("color").style.backgroundColor="rgb(" + document.getElementById("r").value + "," + document.getElementById("g").value + "," + document.getElementById("b").value + ")";
+         }
+      </script>
+   </body>
+</html>
