@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8" />
+      <title>Deneme</title>
+      <script>
+         function led(led_number)
+         {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.open('POST', "led.php", true);
+            xmlhttp.send('led_number=' + led_number + '&port=' + document.getElementById('port').value);
+         }
+      </script>
+   </head>
+   <body>
+      <label for="port">Port:</label>
+      <input id="port" />
+
+      <br />
+
+      <button onclick="led('1')">1</button>
+      <button onclick="led('2')">2</button>
+      <button onclick="led('3')">3</button>
+   </body>
+</html>
