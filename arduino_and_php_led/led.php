@@ -1,3 +1,5 @@
 <?php
-   shell_exec('echo ' . $_POST['led_number'] . ' >> ' . $_POST['port']);
+   $led_number = escapeshellarg($_POST['led_number']);
+   $port = escapeshellarg($_POST['port'])
+   shell_exec('echo ' . $led_number  . ' >> ' . $port);
 ?>
